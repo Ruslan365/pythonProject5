@@ -1,0 +1,81 @@
+Index: homework1/2.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># написать функцию, которая на вход принимает список из целых чисел, и возвращает только чётные/нечётные/простые числа\r\n# (выбор производится передачей дополнительного аргумента)\r\nlist = []\r\nb = 1\r\nquestion = int(input('если вы хотите найти чётные, нечётные, или же простые числа, введите 1, 2 или 3 соответсвенно'))\r\nprint('вводите целые числа, если хотите закончить ввод, введите 0 :')\r\nwhile b != 0:\r\n    b = int(input(''))\r\n    list.append(b)\r\ndef even(mini_digit):\r\n    for i in range (1, len(list)):\r\n        if i % 2 == 0:\r\n            print(i)\r\ndef odd(mini_digit):\r\n    for i in range (1, len(list)):\r\n        if i % 2 == 1:\r\n            print(i)\r\ndef simple(number):\r\n    n = number\r\n    counter = 0\r\n    for i in range(1, n + 1):\r\n        if n % i == 0:\r\n            counter += 1\r\n    if counter == 2:\r\n        print(number)\r\n\r\nif question == 1:\r\n    even(len(list))\r\nif question == 2:\r\n    odd(len(list))\r\nif question == 3:\r\n    for j in list:\r\n        simple(j)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework1/2.py b/homework1/2.py
+--- a/homework1/2.py	(revision aca1a64328657b7442a3d91a80dce736544da5aa)
++++ b/homework1/2.py	(date 1609535898327)
+@@ -1,9 +1,11 @@
+ # написать функцию, которая на вход принимает список из целых чисел, и возвращает только чётные/нечётные/простые числа
+ # (выбор производится передачей дополнительного аргумента)
++
+ list = []
+ b = 1
+ question = int(input('если вы хотите найти чётные, нечётные, или же простые числа, введите 1, 2 или 3 соответсвенно'))
+ print('вводите целые числа, если хотите закончить ввод, введите 0 :')
++
+ while b != 0:
+     b = int(input(''))
+     list.append(b)
+@@ -11,10 +13,12 @@
+     for i in range (1, len(list)):
+         if i % 2 == 0:
+             print(i)
++
+ def odd(mini_digit):
+     for i in range (1, len(list)):
+         if i % 2 == 1:
+             print(i)
++
+ def simple(number):
+     n = number
+     counter = 0
+@@ -26,8 +30,10 @@
+ 
+ if question == 1:
+     even(len(list))
++
+ if question == 2:
+     odd(len(list))
++
+ if question == 3:
+     for j in list:
+         simple(j)
+Index: homework1/1.py
+===================================================================
+diff --git a/homework1/1.py b/homework1/1.py
+deleted file mode 100644
+--- a/homework1/1.py	(revision aca1a64328657b7442a3d91a80dce736544da5aa)
++++ /dev/null	(revision aca1a64328657b7442a3d91a80dce736544da5aa)
+@@ -1,8 +0,0 @@
+-# написать функцию, которая принимает N целых чисел и возвращает список квадратов
+-# этих чисел. Бонусом будет сделать keyword аргумент для выбора степени, в которую будут возводиться числ
+-N = int(input('сколько будет чисел?'))
+-keyword = int(input('в какую степень возвести?'))
+-digits = []
+-for i in range (N):
+-    digits.append (int(input('')) ** keyword)
+-print (digits)
+\ No newline at end of file
+Index: homework1/квадраты.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework1/квадраты.py b/homework1/квадраты.py
+new file mode 100644
+--- /dev/null	(date 1609535736914)
++++ b/homework1/квадраты.py	(date 1609535736914)
+@@ -0,0 +1,8 @@
++# написать функцию, которая принимает N целых чисел и возвращает список квадратов
++# этих чисел. Бонусом будет сделать keyword аргумент для выбора степени, в которую будут возводиться числ
++N = int(input('сколько будет чисел?'))
++keyword = int(input('в какую степень возвести?'))
++digits = []
++for i in range (N):
++    digits.append (int(input('')) ** keyword)
++print (digits)
+\ No newline at end of file
